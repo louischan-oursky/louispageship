@@ -23,7 +23,8 @@ class AppError extends Error {
 }
 
 async function signIn(email: string, password: string): Promise<string> {
-  const url = `${endpoint}/api/v1/authentication_flows`;
+  // Forward any necessary query parameter.
+  const url = `${endpoint}/api/v1/authentication_flows${window.location.search}`;
   const body = {
     flow_reference: {
       type: "login_flow",
