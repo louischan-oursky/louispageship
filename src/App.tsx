@@ -66,14 +66,14 @@ export default function App(): ReactElement {
     (e) => {
       setEmail(e.currentTarget.value);
     },
-    []
+    [],
   );
 
   const onChangePassword: ChangeEventHandler<HTMLInputElement> = useCallback(
     (e) => {
       setPassword(e.currentTarget.value);
     },
-    []
+    [],
   );
 
   const onSubmit: FormEventHandler<HTMLFormElement> = useCallback(
@@ -88,10 +88,10 @@ export default function App(): ReactElement {
         (e) => {
           console.error(e);
           setError(e);
-        }
+        },
       );
     },
-    [email, password]
+    [email, password],
   );
 
   return (
